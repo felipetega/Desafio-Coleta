@@ -8,19 +8,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Desafio Coleta - GRX</h1>
-    </header>
     <main>
+      <h1>Desafio Coleta - GRX</h1>
       <section id="section-1">
         <p>1-Você se considera bom em lógica?</p>
-        <div id="sim-1" onclick="pergunta1(this.id)">Sim</div>
-        <div id="nao-1" onclick="pergunta1(this.id)">Não</div>
+        <div id="sim-1" onclick="pergunta1(this.id)"><p>Sim</p></div>
+        <div id="nao-1" onclick="pergunta1(this.id)"><p>Não</p></div>
       </section>
       <section id="section-2">
         <p>2-Gosta de aprender com desafios?</p>
-        <div id="sim-2" onclick="pergunta2(this.id)">Sim</div>
-        <div id="nao-2" onclick="pergunta2(this.id)">Não</div>
+        <div id="sim-2" onclick="pergunta2(this.id)"><p>Sim</p></div>
+        <div id="nao-2" onclick="pergunta2(this.id)"><p>Não</p></div>
       </section>
       <section id="section-3">
         <p>3-Gostaria de fazer parte da GRX?</p>
@@ -43,9 +41,10 @@
           maxlength="200"
           wrap="soft"
         ></textarea>
+        <p id="contadorCaracteres">0/200</p>
       </section>
       <section id="section-5">
-        <div>Enviar</div>
+        <div><p>Enviar</p></div>
       </section>
     </main>
   </body>

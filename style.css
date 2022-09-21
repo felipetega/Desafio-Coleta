@@ -4,22 +4,40 @@
 }
 body{
   background-color: gray;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+}
+main{
+  display:block;
+  background-color: aliceblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  height: fit-content;
 }
 h1{
   margin: 20px;
 }
 div{
-  background-color: white;
   display: inline-block;
-  width: 150px;
+  width:200px;
   height: 30px;
   border: 3px solid black;
 }
+div,section p{
+  text-align: left;
+}
+
+div p, #section-3, #section-4{
+  text-align: center;
+}
+
 #section-5 div{
   background-color: cornflowerblue;
-  width: 300px;
+  width: 410px;
   height: 25px;
+}
+
+#contadorCaracteres{
+  text-align: right;
 }
