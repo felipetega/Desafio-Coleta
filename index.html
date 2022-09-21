@@ -14,18 +14,18 @@
     <main>
       <section id="section-1">
         <p>1-Você se considera bom em lógica?</p>
-        <div>Sim</div>
-        <div>Não</div>
+        <div id="sim-1" onclick="pergunta1(this.id)">Sim</div>
+        <div id="nao-1" onclick="pergunta1(this.id)">Não</div>
       </section>
       <section id="section-2">
         <p>2-Gosta de aprender com desafios?</p>
-        <div>Sim</div>
-        <div>Não</div>
+        <div id="sim-2" onclick="pergunta2(this.id)">Sim</div>
+        <div id="nao-2" onclick="pergunta2(this.id)">Não</div>
       </section>
       <section id="section-3">
         <p>3-Gostaria de fazer parte da GRX?</p>
         <select name="select" id="select">
-          <option value=""></option>
+          <option value="">Selecione uma opção</option>
           <option value="Sim">Sim</option>
           <option value="Não">Não</option>
           <option value="Não Sei">Não Sei</option>
@@ -49,4 +49,5 @@
       </section>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>
