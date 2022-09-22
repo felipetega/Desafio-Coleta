@@ -60,13 +60,32 @@ function validarFormulario() {
     resposta4.length > 14 &&
     resposta4.length < 201
   ) {
-    //RESPOSTA FINAL
-    let resposta1234 = { resposta1, resposta2, resposta3, resposta4 }
-    respostaFinal = JSON.stringify(resposta1234)
-    enviarFormulário()
+    let respostas = [resposta1, resposta2, resposta3, resposta4]
+    somaPontos(respostas)
   }
 }
 
-function enviarFormulário() {
-  console.log('dsaadasd')
+function somaPontos(respostas) {
+  let quantidadePositiva = 0
+  let quantidadeNegativa = 0
+  let quantidadeNaoAvaliada = 0
+  for (let i = 0; i < 3; i++) {
+    if (respostas[i] == 'Sim') {
+      quantidadePositiva += 1
+    } else if (respostas[i] == 'Não') {
+      quantidadeNegativa += 1
+    } else if (respostas[i] == 'Não Sei') {
+      quantidadeNaoAvaliada += 1
+    } else if (respostas[i] == 'Agora!!') {
+      quantidadePositiva += 2
+    }
+  }
+  let pontosTotais = [
+    quantidadePositiva,
+    quantidadeNegativa,
+    quantidadeNaoAvaliada
+  ]
+  respostaFinal = respostas + pontosTotais
+  //respostaFinal = JSON.stringify(respostaFinal)
+  console.log(respostaFinal)
 }
