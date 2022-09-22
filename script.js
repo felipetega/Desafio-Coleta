@@ -23,3 +23,13 @@ function pergunta2(id) {
     sim.style.background = 'white'
   }
 }
+
+function contador(value) {
+  let contador = document.getElementById('contadorCaracteres')
+  contador.innerHTML = `${value.length}/200`
+  if (value.length > 200) {
+    contador.style.color = 'red'
+  } else {
+    contador.style.color = 'black'
+  }
+}
