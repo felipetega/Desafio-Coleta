@@ -25,11 +25,18 @@ function pergunta2(id) {
 }
 
 function contador(value) {
+  var contadorCaracteres = value.length
   let contador = document.getElementById('contadorCaracteres')
-  contador.innerHTML = `${value.length}/200`
+  contador.innerHTML = `${contadorCaracteres}/200`
   if (value.length > 200) {
     contador.style.color = 'red'
   } else {
     contador.style.color = 'black'
+  }
+}
+
+function enviarFormulario(){
+  if(contadorCaracteres>14 && contadorCaracteres<201){
+    
   }
 }
