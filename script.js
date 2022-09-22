@@ -4,6 +4,7 @@ var resposta3 = ''
 var resposta4 = null
 var respostaFinal = null
 
+//PERGUNTA1
 function pergunta1(id) {
   let resposta = document.getElementById(id)
   let sim = document.getElementById('sim-1')
@@ -21,6 +22,7 @@ function pergunta1(id) {
   }
 }
 
+//PERGUNTA 2
 function pergunta2(id) {
   let resposta = document.getElementById(id)
   let sim = document.getElementById('sim-2')
@@ -38,6 +40,7 @@ function pergunta2(id) {
   }
 }
 
+//Contador carácteres
 function contador(value) {
   let contador = document.getElementById('contadorCaracteres')
   contador.innerHTML = `${value.length}/200`
@@ -48,6 +51,7 @@ function contador(value) {
   }
 }
 
+//Validação formulário completo
 function validarFormulario() {
   //RESPOSTA 3
   resposta3 = document.getElementById('select').value
@@ -60,11 +64,13 @@ function validarFormulario() {
     resposta4.length > 14 &&
     resposta4.length < 201
   ) {
+    //Array para soma dos pontos
     let respostas = [resposta1, resposta2, resposta3, resposta4]
     somaPontos(respostas)
   }
 }
 
+//Soma dos pontos
 function somaPontos(respostas) {
   let quantidadePositiva = 0
   let quantidadeNegativa = 0
@@ -80,12 +86,16 @@ function somaPontos(respostas) {
       quantidadePositiva += 2
     }
   }
-  let pontosTotais = [
+  //Resposta final
+  let respostaFinal = JSON.stringify({
+    resposta1,
+    resposta2,
+    resposta3,
+    resposta4,
     quantidadePositiva,
     quantidadeNegativa,
     quantidadeNaoAvaliada
-  ]
-  respostaFinal = respostas + pontosTotais
-  //respostaFinal = JSON.stringify(respostaFinal)
+  })
+
   console.log(respostaFinal)
 }
