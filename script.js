@@ -101,4 +101,10 @@ function resultadoJson() {
     quantidadeNaoAvaliada
   })
   console.log(respostaFinal)
+  /*
+  O que eu queria fazer(e não consegui) era gerar o arquivo .json a partir desta function, visto que, a variável respostaFinal já está formatada, logo abaixo está a maneira que achei que deveria funcionar:
+  const fs = require('fs')
+  fs.writeFileSync('./src/data/forms.json', resultadoJson)
+  Porém, consegui gerar o arquivo .json a partir do script2.js
+  */
 }

@@ -1,0 +1,5 @@
+Conteúdo de apoio
+Para criar a API:
+https://www.youtube.com/watch?v=WejbsEnvvRQ
+Para gerar o .json:
+https://stackabuse.com/reading-and-writing-json-files-with-node-js/

@@ -1,30 +1,33 @@
+/*
+API e gerador do .json
+Para rodar: node script2.js
+Para acessar: http://localhost:3000/forms
+*/
 const express = require('express')
 const server = express()
 const forms = require('./src/data/forms.json')
-//const respostaFinal = require('script.js')
-;('use strict')
-
 const fs = require('fs')
 
-let student = {
-  name: 'Mike',
-  age: 23,
-  gender: 'Male3',
-  department: 'English',
-  car: 'Honda'
-}
+//Este é o resultado mostrado no console do navegador, que não consegui importar do script.js
+let respostaFinal = JSON.stringify({
+  resposta1: 'Sim',
+  resposta2: 'Sim',
+  resposta3: 'Agora!!',
+  resposta4: 'Testando testando',
+  quantidadePositiva: 4,
+  quantidadeNegativa: 0,
+  quantidadeNaoAvaliada: 0
+})
 
-let data = JSON.stringify(student)
-fs.writeFileSync('./src/data/forms.json', data)
-console.log(data)
+//Gerador .json
+fs.writeFileSync('./src/data/forms.json', respostaFinal)
 
+//Local e conteúdo API
 server.get('/forms', (req, res) => {
   return res.json(forms)
 })
 
+//Porta 3000
 server.listen(3000, () => {
   console.log('Servidor está funcionando...')
 })
-
-//http://localhost:3000/forms
-//node script2.js
