@@ -2,6 +2,9 @@ var resposta1 = null
 var resposta2 = null
 var resposta3 = ''
 var resposta4 = null
+var quantidadePositiva = 0
+var quantidadeNegativa = 0
+var quantidadeNaoAvaliada = 0
 var respostaFinal = null
 
 //PERGUNTA1
@@ -72,9 +75,6 @@ function validarFormulario() {
 
 //Soma dos pontos
 function somaPontos(respostas) {
-  let quantidadePositiva = 0
-  let quantidadeNegativa = 0
-  let quantidadeNaoAvaliada = 0
   for (let i = 0; i < 3; i++) {
     if (respostas[i] == 'Sim') {
       quantidadePositiva += 1
@@ -86,8 +86,12 @@ function somaPontos(respostas) {
       quantidadePositiva += 2
     }
   }
-  //Resposta final
-  let respostaFinal = JSON.stringify({
+  resultadoJson()
+}
+
+//Resultado JSON
+function resultadoJson() {
+  respostaFinal = JSON.stringify({
     resposta1,
     resposta2,
     resposta3,
@@ -96,6 +100,5 @@ function somaPontos(respostas) {
     quantidadeNegativa,
     quantidadeNaoAvaliada
   })
-
   console.log(respostaFinal)
 }
