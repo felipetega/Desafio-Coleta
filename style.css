@@ -1,31 +1,36 @@
 *{
-  margin: 0;
+  margin: 2px 0;
   font-family:cursive;
 }
 body{
-  background-color: gray;
+  background-color: white;
 }
 main{
   display:block;
-  background-color: aliceblue;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: fit-content;
-  height: fit-content;
+  width: max-content;
+  height: max-content;
 }
 h1{
-  margin: 20px;
+  margin: 0 0 40px 0;
 }
 div{
+  border: 3px solid black;
   display: inline-block;
   width:200px;
-  height: 30px;
-  border: 3px solid black;
+  height: 50px;
+}
+#section-1 div, #section-2 div{
+  line-height: 50px;
 }
 div,section p{
   text-align: left;
+}
+section p{
+  margin-left: 5px;
 }
 
 div p, #section-3, #section-4{
@@ -34,8 +39,9 @@ div p, #section-3, #section-4{
 
 #section-5 div{
   background-color: cornflowerblue;
-  width: 410px;
-  height: 25px;
+  width: 415px;
+  height: 40px;
+  line-height: 40px;
 }
 
 #contadorCaracteres{
